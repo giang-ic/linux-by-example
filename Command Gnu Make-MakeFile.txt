@@ -1,0 +1,44 @@
+.GNU MAKE là công cụ:
+	.Makefile là tập hợp các gcc để tạo ra file object từ đó tạo ra file build
+	
+	.Cần tạo ra 1 file Makefile
+		.Cần chứa các dòng hướng dẫn để GNU MAKE đọc makefile chạy các gcc -c hoặc -o
+
+		.<file target>: <file source>
+			<tab><command gcc -option <file.c/file source>
+		 
+		 ...ở đây có nhiều file target hoặc file run khác nhau...
+		 
+		 <file run/file target>: <file target/file.o/file source>
+			<tab><command gcc -o <file run> <file.o>
+			
+			.file target: là file mình cần tạo ra ví dụ như .c hoặc .object
+			.file source: là file gốc để build ra file target , nó là file.chạy
+			.nhấn tab: để biểu thị nó là command
+			.file run: là file để chạy được tạo ra từ file.o
+			
+	.Để chạy:
+		.make <file target/file run>
+		
+		.Cái make này nó sẽ tìm file target hoặc file run để nó chạy 
+			chạy xong nó sẽ out
+			
+		.Và khi make mà nó thấy file source chưa nó thì nó sẽ tìm target để tạo
+			ra file source thực thi tạo ra file source và sau đó chạy...
+			
+		.Ví dụ cần tạo ra file từ file.o mà nếu nó thấy file.o chưa tồn tại thì
+			nó sẽ tìm coi có cái nào tạo ra file.o không, nếu có thì nó sẽ thực thi
+			cái để tạo ra file.o sau đó sẽ sẽ tạo ra file
+				.Lưu ý nó cũng cần tìm ra file.c để tạo ra file.o :))
+
+		.make <none>
+			.none: nghĩa là không cần truyền thêm tham số
+			
+			.nó sẽ thực hiện tất cả các target cần thực thi trong makefile
+			
+			.Lưu ý cần đặt cấu trúc từ trên xuống đối với cách này
+		
+		
+			
+			
+		

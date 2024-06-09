@@ -1,0 +1,19 @@
+	.CÀI ĐẶT PHẦN MỀM VỚI CÁC GÓI .deb: (debian)
+		.sudo dpkg -i <file.deb>
+		
+		
+	.CÀI ĐẶT PHẦN MỀM THÔNG QUA apt:
+		.Cài đặt tất cả các gói mà bao gồm các gói phụ thuộc(kiểu như 3 gói .deb phụ thuộc nhau)
+		.sudo apt-get install <package>
+		.sudo apt-get update
+		.sudo add-apt-repository <package>
+	
+	.GỠ BỎ PHẦN MỀM:
+		.sudo apt-get remove <package>
+			.<pagkage> được tìm bằng câu lệnh
+				.apt list --installed
+				
+				.Câu lệnh mở rộng
+					.apt list --installed | grep <name find>
+					
+		.sudo apt-get autoremove

@@ -1,0 +1,40 @@
+	
+	.Để Coppy trong Terminal Linux:
+		.Ctrl + Shift + C
+	.Để Paste trong Terminal Linux:
+		.Ctrl + Shift + V
+		
+	.Lệnh hiển thị ra các thư mục ở nơi bạn đang đứng:
+		.ls
+		
+		.Lệnh hiển thị ra các thư mục nơi bạn đang đứng + các thông tin(quyền, user, group,...)
+			.ls -l
+	
+	.Xóa màn hình Terminal:
+		.Ctrl + l
+		.clear
+		
+	.Quay lại các lệnh đã gõ:
+		.Mũi tên lên xuống
+		
+	.Xuất ra các danh sách lệnh đã gõ:
+		.history
+			.! <number command> : để dùng lệnh nhanh (chú ý xem trong history rồi mới dùng được
+
+	.Lệnh cd:	
+		.Thư mục hiện tại back lại thư mục chứa nó ( về thư mục cha của thư mục hiện tại)
+			.cd ..
+		
+		.Thư mục hiện tại đi vào thư mục con
+			.cd <name folder>
+			
+			.cd <char name folder> + tab
+			
+			.Nếu có nhiều thư mục có cùng kí tự đầu giống nhau, lệnh dưới sổ ra các thư mục có tên bắt đầu giống nhau
+				.cd <char name folder> + double tab
+				
+	.In ra thư mục hiện hành nơi mình đang làm việc
+		.pwd
+		
+	.Câu lệnh để xem địa chỉ ip:
+		.ifconfig

@@ -1,0 +1,13 @@
+	.TIẾN TRÌNH:
+		.Kí hiệu:
+			.PID: process id
+			.sl: sleep(không hoạt động)
+			.r+: run(đang chạy)
+		.Xem thông tin tiến trình trên hệ thống:
+			.ps -u
+			.top (dạng như task manager)
+				.Nhấn space để nó refresh(làm mới)
+				.Nhấn 'q' để thoát
+		
+		.Tắt-Kết thúc tiến trình:
+			.kill -9 <pid>

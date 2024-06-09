@@ -1,0 +1,60 @@
+.GCC: là một trình biên dịch (compiler) source code thành một chương trình để chạy
+
+.IDE: thì bao gồm trình biên dịch, editer, debug, nhưng GCC chỉ là một trình biên dịch
+
+	.Cài GCC cho linux ta chỉ cần dùng câu lệnh:
+		.sudo apt-get install gcc
+		
+	.Kiểm tra GCC đã được cài thành công hay chưa:
+		.gcc --version
+		
+	.Complie Build Source Code
+		.gcc <file name>
+			.sau đó sẽ xuất ra file.out
+	
+	.Chạy file.out
+		. ./file.out
+		
+	.Tạo ra một file để chạy mà không phải file.out
+		.gcc -o <name could build> <file.c>
+		
+		.Sau đó để chạy ta chỉ cần: ./<name could build>
+		
+	.Tạo ra một file nhị phân
+		.gcc -c <file.c>
+			.Nó sẽ tạo ra file nhị phân là file.o còn gọi là file object
+			.Nó từ quá trình Assembly tạo ra
+			.Qua quá trình Assembly nó sẽ linker tạo ra file exe
+			
+	
+	.Quá trình từ source code đến bước tiền xử lý
+		.gcc -E -o <new file.i> <file.c>
+			.-E để tạo ra file tiền xử lý
+			.-o xuất ra file output
+			
+	.Quá trình từ file.i (file đã qua tiền xử lý) thành file Assembly
+		.gcc -S -o <new file.s> <file.i>
+			.-S là để build từ source.i qua mã Assembly
+			
+	.Quá trình từ file.s (file Assembly) tạo ra file Object gọi là quá trình Linked
+		.as -o <new file.o> <file.s>
+			.Đây là 1 file nhị phân nên không thể đọc được
+		
+	
+		
+	.Khi có nhiều file thư viện trong folder mà gõ gcc file.c thì nó sẽ không hiểu
+		vì linked được, khi đó ta cần tạo ra file thư viện và file main ở dạng nhị phân(.0)
+
+		.gcc -c lib.c
+		.gcc -c file.c
+			.nghĩa là phải tạo ra file object của main và thư viện
+		
+		.gcc -o <new name will build> <file.o> <file.o> ... <file.o>
+		
+		.File này sau đó đã có thể run luôn vì đã complie xong
+		
+		
+		.Làm như vầy sẽ lâu nên ta cần chuyển qua công cụ GNU MAKE(make file)
+		
+		
+		

@@ -1,0 +1,52 @@
+FILE LINUX
+	.Trong linux tất cả mọi thứ đều là file
+	.Thư mục cũng là một file
+	.Hệ thống file trên Linux được biểu diễn dưới dạng cấu trúc cây thư mục
+	.Thư mục đầu tiên là thư mục root 
+		.Kí hiệu thư mục root: ./
+		
+	
+	.Thư mục root (./) sẽ có các file con:
+		.User Binaries: /bin
+		
+		.System Binaries: /sbin
+		
+		.Configuration Files: /etc
+		
+		.Device Files: /dev
+		
+		.Process Infomation: /proc
+		
+		.Variable Files : /var
+		
+		.Temporary Files: /tmp
+		
+		.User Programs: /usr
+		
+		.Home Directories: /home
+		
+		.BootLoader Files: /boot
+		
+		.System Libraries: /lib
+		
+		.Optional add-on Apps: /opt
+		
+		.Mousse Directory: /mnt
+		
+		.Removable Devices: /media
+		
+		.Service Data: /srv
+		
+	.Đường dẫn tuyệt đối là đường dẫn bắt đầu thư mục root và đi đến nơi ta cần đến
+		.cd /home/thunder/
+		
+	.Đường đãn tương đối là đường dẫn không bắt đầu từ / mà xác định ví trí của file/thu mục cần đến bằng việc tham
+		chiếu vị trí hiện tại
+		.cd ./Downloads/
+			.Lưu ý đang đứng ở thư mục cha của Downloads/
+			
+		.cd ./thunder/Downloads/
+			.Lưu ý đang đứng ở thư mục home và nó chứa thunder và thunder chứa downloads
+			
+
+		

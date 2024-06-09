@@ -1,0 +1,85 @@
+	.TẬP LỆNH TẠO FILE/FOLDER:
+		.Tạo một file rỗng:
+			.touch <file name>
+			
+		.Xóa file:
+			.rm <file name>
+			
+		.Tạo một thư mục:
+			.mkdir <file name folder>
+		
+		.Xóa thư mục:
+			.Xóa thư mục rỗng:
+				.rmdir <file name folder>
+				
+			.Xóa thư mục không rỗng:
+				.rm -rf <file name folder>
+				
+		.Di chuyển file/thư mục:
+			.mv <vị trí /file name> <vị trí cần tới>
+				.Lệnh mv này có thể di chuyển nhiều thư mục
+			
+		.Đổi tên thư mục:
+			.mv -i <old name> <new name>
+		
+		.Di chuyển toàn bộ thư mục file vào chổ khác, cách làm nhanh:
+			.mv ./Desktop/* ./Downloads/
+				.dấu * biểu thị cho tất cả
+			
+		.Coppy một file:
+			.cp <file origin> <file new>
+			
+	.TẬP LỆNH ĐỌC/CHỈNH SỬA/TÌM KIẾM FILE:
+		.Khi đang mở file muốn tắt ta có thể:
+			.Ctrl + C
+			
+		.Đọc toàn bộ nội dung file:
+			.cat <file name>
+			
+			.Đọc hết file:
+				.cat *
+			
+		.Đọc nội dung file, sử dụng phím space để đọc phần tiếp theo:
+			.more <file name>
+			
+		.Dễ dàng đọc file có nội dung lớn hơn 1 trang bằng cách sử dụng mũi tên	
+			lên xuống, nhấn 'q' để thoát:
+			.less <file name>
+			
+		.Đọc m dòng đầu tiên của file(-n m không có thì sẽ đọc 10 dòng đầu):
+			.head -n m <file name>
+			
+		.Đọc m dòng cuối cùng của file(-n m không có thì sẽ đọc 10 dòng cuối):
+			.tail -n m <file name>
+			
+			.Lệnh này rất hữu dụng khi đọc file log bằng cách dung thêm option -file
+				để cập nhật nội dung file log ngay khi lệnh tail vẫn đang thực thi:
+				.tail -f <log file>
+	
+	
+		.Chỉnh sửa file:
+			.Nếu chưa có file, thì lệnh này sẽ tạo ra 1 file mới, cho ghi và save
+				.gedit <file name>
+			
+			.Lệnh là công cụ chỉnh sửa văn bản có 2 chế độ command-txt:
+				.vi <file name>
+					.tạo ra 1 file(nếu có file đó rồi thì sẽ vào file đó)
+					.mới vào thì không gõ text được phải nhấn 'i'
+					.sau khi gõ xong để lưu thì phải về chế độ commnad:
+						.để thoát và lưu(write quit):
+							.nhấn esc, sau đó :wq + enter
+						.để thoát và không lưu:
+							.nhấn esc, sau đó : + enter
+							
+					.Lưu ý dấu cộng là nhấn thêm không phải kí tự trong lệnh
+					
+			.Lệnh tương tự nhưng dùng gọn hơn vi
+				.nano <file name>
+					.Để lưu : Ctrl + O
+						.Chỉnh tên file + Enter
+					.Để thoát: Ctrl + X
+					
+		.Tìm kiếm file:
+			.find <thư mục cần tìm> -name <tên file cần tìm>
+			
+			.Ví dụ : find /etc/ -name passwd

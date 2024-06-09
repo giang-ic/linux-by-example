@@ -1,0 +1,61 @@
+COMMAND LINE INTERFACE
+	.Phím tắt để mở Command Line Interface: Ctrl + Alt + T
+	
+	.Gõ lệnh để thoát Terminal: exit 
+	
+	.Lợi ích của việc dùng Command Line Interface:
+		.Giảm kích thước hệ thống
+		.Tốc độ sử lý nhanh vì đồ họa đã bị disable
+		
+	.Hạn chế của việc dùng Command Line Interface:
+		.Hơi khó sử dụng khi mới tiếp cận vì phải nhớ các lệnh
+		
+	.Giao diện dòng lệnh trên Linux còn gọi là: Terminal
+	
+	.Cú pháp lệnh:
+		.command <option> <argument>
+		
+		.một cú pháp lệnh có thể không có option và argument
+		
+	.Tra cứu lệnh:
+		.man <command>
+		.<command> --help
+		
+
+	Kí hiệu dòng lệnh:
+		.Dấu '.' để biểu diễn cho thư mục hiện tại
+		
+		.Ví dụ bạn đang đứng ở Downloads, thư mục Downloads nằm trong Home thì ./../ nghĩa là từ thư mục Downloads đi ra thư mục Home
+	
+		.Ví dụ đang ở thư mục Downloads và muốn hiển thị xem các thư mục ở thư mục Home
+			.ls ./../
+				.Nghĩa là thư mục hiện tại: ./
+				.Nhảy ra một thư mục : ../
+				.Suy ra : ./../
+				
+	
+		.Biểu thị cho user:
+			.~$ 
+			
+		.Biểu thị cho group:
+			.$
+		
+		.Lưu ý: cuối mỗi dường dẫn folder/file đều có kí hiệu '/'
+		
+		.Linux không phân biệt txt mới là file text, không có txt thì nó cũng là file text
+		
+		.Tới đường dẫn thì cuối đường dẫn phải có kí hiệu '/'
+			.Tới file thì không cần
+			
+		
+	.CÁC TẬP LỆNH:
+		
+		
+			
+		
+		
+					
+				
+		
+					
+				

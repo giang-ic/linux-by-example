@@ -1,0 +1,12 @@
+
+	.LỆNH LOAD CHƯƠNG TRÌNH VÀO HỆ THỐNG
+		.sudo insmod <filename.ko>
+	
+	.LỆNH THOÁT KHỎI LOAD	
+		.sudo rmmod <filename.ko>
+		
+	.Xem chạy
+		.dmesg
+
+	.xem nhung ctrinh dg chay
+		.lsmod

@@ -1,0 +1,94 @@
+	.THAO TÁC VỚI USER:
+		.File name user được đặt trong file: /etc/passwd
+		.Mật khẩu user được đặt trong file: /etc/shadow
+		.Từ khóa quyền người dùng root có quyền tối đa:
+			.sudo 
+			.Cú pháp : sudo <command>
+			
+			.Chuyển qua quyền root luôn, nghĩa là sau khi dùng câu lệnh này thì không
+				cần phải thêm từ khóa sudo nữa
+				.sudo su
+			
+		.Tạo user:
+			.sudo useradd <name user>
+			
+		.Xóa user:
+			.sudo userdel <name user>
+			
+		.Đặt mật khẩu cho user:
+			.sudo passwd <name user>
+			
+		.Chuyển đổi giữa các user:
+			.su <name user>
+				.Sau đó bạn có thể sử dụng các lệnh như bth,
+					nhưng với danh nghĩa user vừa chuyển vào
+				
+				.Để thoát gõ lệnh: exit
+				
+	.THAO TÁC VỚI GROUP:
+		.File name group được đặt trong file: /etc/group
+		.Tạo group:
+			.sudo groupadd <name group>
+			
+		.Xóa group:
+			.sudo groupdel <name group>
+				.nếu có 1 user đang trong group đó thì không xóa được
+					phải chuyển đi trước
+			
+		.Thay đổi group của user:
+			.sudo usermod -g <name group> <name user>
+			
+	.QUYỀN SỞ HỮU:
+		.Có 1 user/group tối thượng trong linux là: root
+		.Để xem quyền: ls -l
+			.Kí tự đầu tiên: 
+				.- : biểu diễn cho file
+				.d : biểu diễn cho thư mục
+				
+			.9 Kí tự tiếp theo biểu diễn cho các quyền của user-group-other user
+				.Mỗi đối tượng có 3 quyền, nghĩa là có 3 kí tự
+				
+		.Thay người sở hữu(user):
+			.sudo chown <new user> <file name>
+			
+		.Thay đổi nhóm người sở hữu(group):
+			.sudo chgrp <new group> <file name>
+			
+		.Thay đổi/Phân quyền cho 1 file:
+			.chmod <permission> <file name>
+			
+			.Kí hiệu các quyền:
+				.Read:
+					.r
+					.4
+				.Write:
+					.w
+					.2
+				.Excute:
+					.x
+					.1
+				.None:
+					.-
+					.0
+				
+			.Kí hiệu đối tượng phân quyền:
+				.User: u
+				.Group: g
+				.Other user: o
+				
+			.Có 2 cách phân quyền:
+				.Đối với chữ:
+					.Thêm quyền: +
+					.Giảm quyền: -
+					.Đổi quyền(gán quyền): =
+				
+				.Đối với số:
+					.Ta cộng các quyền lại
+			
+			.Ví dụ:
+				.sudo chmod u=r, g=w, o=- filename
+				.sudo chmod u+r, g=r filename
+				.sudo chmod 720 filename
+					.user = 4 + 2 + 1 (r, w, x) 
+					.group = 2	(w)
+					.other user = 0 (-)

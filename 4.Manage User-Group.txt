@@ -1,0 +1,32 @@
+LINUX MULTIPLE USER
+	.User là người có thể truy cập vào hệ thống sử dụng hệ thống
+	.Linux cho phép nhiều người dùng có thể cùng truy cập(sử dụng) một máy tính,
+		ngay cả khi tại cùng một thời điểm
+	.Có 2 loại user:
+		.user normal
+		.user root(có quyền tối đa trên hệ thống)
+	.Mỗi user có một mã định danh gọi là UID(user id)
+	.File name user được đặt trong file: /etc/passwd
+	.Mật khẩu user được đặt trong file: /etc/shadow
+	
+	
+	.Group là tập hợp nhiều user
+	.Khi tạo ra user mặc định một group mưới sẽ được tạo ra
+	.Mỗi group có mã định danh riêng gọi là GID(group id)
+	
+	PHÂN QUYỀN TRÊN LINUX:
+		.User: là người sở hữu file
+		.Group: Group sở hữu file
+		.Other User: không nằm trong group cũng không phải user mà cũng sở hữu file
+		
+		.Trên linux có 3 loại quyền:
+			.Read: quyền cho phép đọc nội dung file, xem nội dung thư mục
+			.Write: cho phép ghi, xóa, thay đổi nội dung file hoặc thêm, xóa thư mục
+			.Excute: quyền thực thi file(ví dụ cho phép chạy 1 file .c)
+			
+	TIẾN TRÌNH TRÊN LINUX:
+		.Tiến trình(process) là một chương trình trên hệ thống
+		.Mỗi process có một số định danh riêng PID(process id)
+		
+	
+		
